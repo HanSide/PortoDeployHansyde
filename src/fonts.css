@@ -1,0 +1,139 @@
+/* Custom Fonts Definition - Frontage & Juana */
+
+@font-face {
+  font-family: 'Frontage';
+  src: url('/Font/Frontage-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frontage';
+  src: url('/Font/Frontage-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frontage-3D';
+  src: url('/Font/Frontage-3D.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frontage-Bulb';
+  src: url('/Font/Frontage-Bulb.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frontage-Outline';
+  src: url('/Font/Frontage-Outline.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frontage-Shadow';
+  src: url('/Font/Frontage-Shadow.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Juana Font Family */
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-extralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-regularit.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/Font/Fontspring-DEMO-juana-black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Juana Alt Font Family */
+@font-face {
+  font-family: 'Juana Alt';
+  src: url('/Font/Fontspring-DEMO-juanaalt-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana Alt';
+  src: url('/Font/Fontspring-DEMO-juanaalt-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

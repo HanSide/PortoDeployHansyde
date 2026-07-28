@@ -1,0 +1,26 @@
+@import "./fonts.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0a0d12;
+  color: #dedede;
+  font-family: "Juana", "Georgia", serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: "Frontage", sans-serif;
+  color: #dedede;
+}
+
+#root {
+  min-height: 100vh;
+  isolation: isolate;
+}
+
