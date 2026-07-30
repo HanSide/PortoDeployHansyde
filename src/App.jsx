@@ -13,6 +13,7 @@ import { OverlayContext } from "./OverlayContext";
 import VfxReel from "./components/VfxReel";
 import ContactSection from "./components/ContactSection";
 import AboutSection from "./components/AboutSection";
+import CertificateSection from "./components/CertificateSection";
 import "./App.css";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -51,6 +52,7 @@ export default function App() {
           onMouseLeave={() => setIsAboutHovered(false)}
         >
           <AboutSection isHovered={isAboutHovered} />
+          <CertificateSection />
         </Section>
 
         <Section id="work" title="WORK">

@@ -2,8 +2,20 @@ import amokImage from "../../Image/amok.png";
 import speakImage from "../../Image/speak.png";
 import memoryLeakImage from "../../Image/memoryleak.png";
 import littleOceanImage from "../../Image/littleocean.png";
+import vanakalaImage from "../../Image/vanakala.png";
 
 export const PROJECTS = [
+  {
+    id: "vanakala",
+    title: "VANAKALA",
+    role: "Game Programmer & VFX Artist",
+    date: "2026 - ONGOING",
+    status: "IN DEVELOPMENT",
+    description: "Developed core mechanics, state-driven enemy AI, and modular architecture using ScriptableObjects. Synthesized real-time VFX with gameplay logic for seamless player immersion.",
+    tools: ["Unity", "C#", "VFX Graph", "Tech Art"],
+    images: [vanakalaImage], 
+    itchUrl: "https://s-myth.itch.io/vanakala"
+  },
   {
     id: "amok",
     title: "AMOK",

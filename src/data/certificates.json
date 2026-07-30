@@ -1,0 +1,49 @@
+{
+  "certificates": [
+    {
+      "id": "C-00",
+      "title": "Finalist Gubufest Gamejam",
+      "issuer": "Politeknik Elektronika Negeri Surabaya",
+      "year": "2026",
+      "status": "VERIFIED",
+      "url": "#",
+      "image": "/Image/Certificate/incomingCertificate.png"
+    },
+    {
+      "id": "C-01",
+      "title": "Course Website Programming",
+      "issuer": "Dicoding",
+      "year": "2025",
+      "status": "VERIFIED",
+      "url": "#",
+      "image": "/Image/Certificate/dicoding.png"
+    },
+    {
+      "id": "C-02",
+      "title": "Participate Binus Gamejam Club",
+      "issuer": "Binus Gamejam Club",
+      "year": "2026",
+      "status": "VERIFIED",
+      "url": "#",
+      "image": "/Image/Certificate/bgdj.png"
+    },
+    {
+      "id": "C-03",
+      "title": "Finalist DUC UI UX",
+      "issuer": "Universitas Diponegoro",
+      "year": "2025",
+      "status": "VERIFIED",
+      "url": "#",
+      "image": "/Image/Certificate/finalisduc.jpg"
+    },
+    {
+      "id": "C-04",
+      "title": "Participate Gamejam+",
+      "issuer": "Gamejam+",
+      "year": "2025",
+      "status": "VERIFIED",
+      "url": "#",
+      "image": "/Image/Certificate/plus.jpg"
+    }
+  ]
+}
