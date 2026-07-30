@@ -1,38 +1,17 @@
-import { useEffect, useState } from "react";
+import artstationData from "../data/artstation-projects.json";
 
 /**
- * VfxReel - live feed synced from ArtStation.
- * Data comes from /api/artstation (a Vercel serverless function that
- * fetches ArtStation's unofficial projects.json endpoint server-side).
- * This avoids CORS issues and keeps the unofficial-endpoint risk contained
- * to one backend file instead of the browser.
+ * VfxReel - shows the ArtStation reel from a static, locally-synced file.
+ *
+ * Why static instead of a live fetch: ArtStation's unofficial projects.json
+ * endpoint blocks datacenter IPs (including Vercel's) with a 403, so a
+ * runtime fetch from production always fails. Instead, run
+ * `node scripts/sync-artstation.js` locally whenever there's a new upload,
+ * commit the updated src/data/artstation-projects.json, and redeploy.
+ * Not real-time, but it never breaks in production.
  */
 export default function VfxReel() {
-  const [projects, setProjects] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ready | error
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadReel() {
-      try {
-        const res = await fetch("/api/artstation");
-        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
-        const json = await res.json();
-        if (!cancelled) {
-          setProjects(json.projects || []);
-          setStatus("ready");
-        }
-      } catch (err) {
-        if (!cancelled) setStatus("error");
-      }
-    }
-
-    loadReel();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const projects = artstationData.projects || [];
 
   return (
     <div className="vfx-reel">
@@ -41,21 +20,9 @@ export default function VfxReel() {
         <h4>VFX</h4>
       </div>
 
-      {status === "loading" && (
-        <p className="vfx-reel__status">Syncing from ArtStation...</p>
-      )}
-
-      {status === "error" && (
-        <p className="vfx-reel__status">
-          Couldn't reach the ArtStation feed right now — check back later.
-        </p>
-      )}
-
-      {status === "ready" && projects.length === 0 && (
-        <p className="vfx-reel__status">No published projects yet.</p>
-      )}
-
-      {status === "ready" && projects.length > 0 && (
+      {projects.length === 0 ? (
+        <p className="vfx-reel__status">No synced projects yet.</p>
+      ) : (
         <div className="vfx-reel__grid">
           {projects.map((project) => (
             <a
