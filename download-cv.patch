@@ -1,0 +1,59 @@
+From dc8413a31f983eb10ae5e7d85948b8792a16ec1c Mon Sep 17 00:00:00 2001
+From: HanSyde <ihanaulia@gmail.com>
+Date: Thu, 6 Aug 2026 13:45:46 +0000
+Subject: [PATCH] feat: tambah tombol download CV di ContactSection
+
+---
+ public/CV/README.txt              |  3 +++
+ src/components/ContactSection.jsx | 11 +++++++++--
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+ create mode 100644 public/CV/README.txt
+
+diff --git a/public/CV/README.txt b/public/CV/README.txt
+new file mode 100644
+index 0000000..0ef19f2
+--- /dev/null
++++ b/public/CV/README.txt
+@@ -0,0 +1,3 @@
++Taruh file CV kamu di sini dengan nama: HanSyde_CV.pdf
++Path akses publiknya jadi: /CV/HanSyde_CV.pdf
++(File .txt ini cuma placeholder, boleh dihapus setelah PDF asli di-drop)
+diff --git a/src/components/ContactSection.jsx b/src/components/ContactSection.jsx
+index e54aa88..fb12eae 100644
+--- a/src/components/ContactSection.jsx
++++ b/src/components/ContactSection.jsx
+@@ -1,6 +1,7 @@
+ import { useState, useRef } from "react";
+ 
+ const SOCIALS = [
++  { id: "cv", label: "DOWNLOAD", value: "CURRICULUM VITAE", href: "/CV/HanSyde_CV.pdf", download: "HanSyde_CV.pdf" },
+   { id: "email", label: "EMAIL", value: "hansydeee@gmail.com", href: "mailto:hansydeee@gmail.com" },
+   { id: "instagram", label: "INSTAGRAM", value: "@r_hnnx", href: "https://www.instagram.com/r_hnnx/" },
+   { id: "linkedin", label: "LINKEDIN", value: "hanside", href: "https://www.linkedin.com/in/hanside/" },
+@@ -57,7 +58,7 @@ export default function ContactSection() {
+       </div>
+ 
+       <ul className="contact-channels">
+-        {SOCIALS.map(({ id, label, value, href }) => {
++        {SOCIALS.map(({ id, label, value, href, download }) => {
+           const isHovered = hoveredId === id;
+           return (
+             <li
+@@ -67,7 +68,13 @@ export default function ContactSection() {
+               onMouseLeave={handleLeave}
+             >
+               {isHovered && <div className="contact-channel__brush" />}
+-              <a href={href} target={id === "email" ? undefined : "_blank"} rel="noreferrer" className="contact-channel__link">
++              <a
++                href={href}
++                download={download || undefined}
++                target={download || id === "email" ? undefined : "_blank"}
++                rel="noreferrer"
++                className="contact-channel__link"
++              >
+                 <span className="contact-channel__label">{label}</span>
+                 <span className="contact-channel__value">{value}</span>
+               </a>
+-- 
+2.43.0
+
