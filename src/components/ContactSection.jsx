@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 
 const SOCIALS = [
+  { id: "cv", label: "DOWNLOAD", value: "CURRICULUM VITAE", href: "/CV/HanSyde_CV.pdf", download: "HanSyde_CV.pdf" },
   { id: "email", label: "EMAIL", value: "hansydeee@gmail.com", href: "mailto:hansydeee@gmail.com" },
   { id: "instagram", label: "INSTAGRAM", value: "@r_hnnx", href: "https://www.instagram.com/r_hnnx/" },
   { id: "linkedin", label: "LINKEDIN", value: "hanside", href: "https://www.linkedin.com/in/hanside/" },
@@ -57,7 +58,7 @@ export default function ContactSection() {
       </div>
 
       <ul className="contact-channels">
-        {SOCIALS.map(({ id, label, value, href }) => {
+        {SOCIALS.map(({ id, label, value, href, download }) => {
           const isHovered = hoveredId === id;
           return (
             <li
@@ -67,7 +68,13 @@ export default function ContactSection() {
               onMouseLeave={handleLeave}
             >
               {isHovered && <div className="contact-channel__brush" />}
-              <a href={href} target={id === "email" ? undefined : "_blank"} rel="noreferrer" className="contact-channel__link">
+              <a
+                href={href}
+                download={download || undefined}
+                target={download || id === "email" ? undefined : "_blank"}
+                rel="noreferrer"
+                className="contact-channel__link"
+              >
                 <span className="contact-channel__label">{label}</span>
                 <span className="contact-channel__value">{value}</span>
               </a>
